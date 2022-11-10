@@ -11,6 +11,9 @@ resource "aws_security_group" "node_group_one" {
       "10.0.0.0/8",
     ]
   }
+  tags = {
+    tagged = "true"
+  }
 }
 
 resource "aws_security_group" "node_group_two" {
@@ -25,5 +28,8 @@ resource "aws_security_group" "node_group_two" {
     cidr_blocks = [
       "192.168.0.0/16",
     ]
+  }
+  tags = {
+    tagged = "true"
   }
 }
